@@ -8,7 +8,7 @@ export default class LibrosController {
   async index({}: HttpContext) {
     try {
       const libros = await Libros.all()
-      return libros;
+      return libros
     } catch (error) {
       console.error('Error fetching libros:', error)
       return { error: 'Failed to fetch libros' }
